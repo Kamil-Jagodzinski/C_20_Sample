@@ -1,0 +1,22 @@
+1. Dana jest struktura
+
+struct tnode 
+{
+    int value;
+    struct tnode *next;
+};
+
+Lista jednokierunkowa cykliczna (ostatni element listy wskazuje na element pierwszy)
+
+Proszę napisać program implementujący obsługę listy jednokierunkowej cyklicznej.
+Program powinien realizować następujące funkcjonalności - w żadnej z funkcji nie tworzymy nowych elementów :
+
+(1) wypisywanie listy - void print_list(struct tnode*);
+(1) dodawanie elementu do listy - struct tnode* add_el(struct tnode* head, struct tnode* el);
+(1) usuwanie elementu z listy (wczytanie wartości klucza do wyboru elementu), jeżeli mamy kilka elementów o podanym kluczu usuwamy
+wszystkie -
+void del_el(struct tnode** head, int var);
+(1) łączenie dwóch list cyklicznych w jedną - struct tnode* add_list(struct tnode* head1, struct tnode* head2);
+(2) podział listy na dwie listy cykliczne - wartości parzyste i nieparzyste - struct tnode* div_list(struct tnode** head);
+(2) odwracanie listy w miejscu - void rev_list(struct tnode*);
+(1) zwalnianie listy - void free_list(struct tnode**);
